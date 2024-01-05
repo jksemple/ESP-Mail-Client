@@ -1091,6 +1091,7 @@ private:
   unsigned long _lastReconnectMillis = 0;
   uint16_t _reconnectTimeout = ESP_MAIL_NETWORK_RECONNECT_TIMEOUT;
 
+public:
   // Resume network connection
   void resumeNetwork(ESP_Mail_TCPClient *client);
 
@@ -1331,6 +1332,7 @@ private:
 
 #if defined(ENABLE_SMTP)
 
+public:
   // Encode Quoted Printable string
   void encodeQP(const char *buf, char *out);
 
@@ -1508,6 +1510,7 @@ private:
 
 #if defined(ENABLE_IMAP)
 
+public:
   // Check if child part (part number string) is a member of the parent part (part number string)
   // part number string format: <part number>.<sub part number>.<sub part number>
   bool multipartMember(const MB_String &parent, const MB_String &child);
